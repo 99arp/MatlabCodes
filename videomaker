@@ -1,0 +1,38 @@
+video_3d= VideoWriter('3d_Pattern.avi'); %create the video object
+video_3d.FrameRate = 6;
+open(video_3d); %open the file for writing
+for x=1:360 %where N is the number of images
+  fileName =  ['Pattern_fuer', num2str(x), '.png'];  
+  I = imread(fileName); %read the next image
+  writeVideo(video_3d,I); %write the image to file
+end
+
+
+video_a= VideoWriter('Elevationpattern_Pattern.avi'); %create the video object
+video_a.FrameRate = 6;
+open(video_a); %open the file for writing
+for x=1:360 %where N is the number of images
+  fileName =  ['ePattern_fuer', num2str(x), '.png'];  
+  I = imread(fileName); %read the next image
+  writeVideo(video_a,I); %write the image to file
+end
+
+
+video_e= VideoWriter('Azimuth_Pattern.avi'); %create the video object
+video_e.FrameRate = 6;
+open(video_e); %open the file for writing
+for x=1:360 %where N is the number of images
+  fileName =  ['aPattern_fuer', num2str(x), '.png'];  
+  I = imread(fileName); %read the next image
+  writeVideo(video_e,I); %write the image to file
+end
+
+
+video_i= VideoWriter('Impedance.avi'); %create the video object
+video_i.FrameRate = 6;
+open(video_i); %open the file for writing
+for x=1:360 %where N is the number of images
+  fileName =  ['impedance_fuer', num2str(x), '.png'];  
+  I = imread(fileName); %read the next image
+  writeVideo(video_i,I); %write the image to file
+end
